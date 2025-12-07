@@ -1,1 +1,77 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  /* font */
+  --font-PressStart2P: 'PressStart2P';
+  --font-Inter-Variable: 'Inter-Variable';
+  --font-weight-Inter-title: 715;
+  --font-weight-Inter-text: 410;
+  --font-size__section: 1.125em;
+  --font-size__header-title: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  --font-size__header-span: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  --font-size__button-text: 14px;
+  --line-height__page: 21px;
+
+  /* page */
+  --page-padding: 100px;
+
+  /* background-gradient */
+  --horizontal-stripes: repeating-linear-gradient(
+    to right,
+    #d3d3d3,
+    #d3d3d3 2px,
+    transparent 2px,
+    transparent 4px);
+  --vertical-stripes: repeating-linear-gradient(
+    to bottom,
+    #d3d3d3,
+    #d3d3d3 2px,
+    transparent 2px,
+    transparent 4px);
+  --color-gradient: linear-gradient(
+    to bottom,
+    #e7e7e7 0.01%,
+    #1a1a1a 100%);
+
+  /* section */
+  --container-width: clamp(320px, 80vw, 1200px);
+  --section-width: clamp(23.437rem, 30.5172vw + 16.2845rem, 43.75rem);
+  --section-height: clamp(20.437rem, 3.8505vw + 19.5345rem, 23rem);
+  --section-border: 2px solid #000;
+  --background-color__section: #fff;
+
+  /* section-title */
+  --padding__section-title: 4px 10px;
+  --font-size__section-title: inherit;
+  --font-weight__section-title: 715;
+  --section-title__inline-size: clamp(371px, 48.35vw, 696px);
+
+  /* image */
+  --image__block-size: clamp(371px, 256.564px + 30.5164vw, 696px);
+  --image__inline-size: clamp(23.187rem, 30.5172vw + 16.0345rem, 43.5rem);
+
+  /* content */
+  --content__block-size: clamp(13.875rem, 16.5rem - 1.8868vw, 20.4375rem);
+  --content__block-size-px: clamp(222px, 374px - 9.8592vw, 327px);
+
+  /* button */
+  --button-save__inline-size: 335px;
+  --button-save__block-size: clamp(55px, 84px - 1.2676vw, 84px);
+
+  /* floppy__button-save */
+  --floppy-width: clamp(21px, 35.5px - 1.03vw, 28px);
+
+  /* dialog-size */
+  --dialog-width: clamp(341px, 337px + 1.127vw, 353px);
+  --close__inline-size: clamp(261px, 249.735px + 3.0047vw, 293px);
+  --dialog-height: 191px;
+  --close__block-size: 38px;
+
+  --text-color: #ffffff;
+  --hover-color: #000000;
+  --transition-duration: 0.5s;
+
+  --contour-color: black;
+  --main-body-color: #ff0000;
+  --animation-fill-color: #FF0000;
+}
+
