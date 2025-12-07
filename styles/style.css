@@ -99,7 +99,7 @@
 }
 
 .image-contrast-inversion {
-  filter: contrast(1.1) invert(0.5);
+  filter: contrast(1.1) invert(0.3);
 }
 
 .image-sepia-contrast {

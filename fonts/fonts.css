@@ -12,7 +12,7 @@
 @font-face {
   font-display: swap;
   font-family: 'Inter-Variable';
-  font-variation-settings: "wght" 400 410 715 785;
+  font-variation-settings: "wght" var(--font-weight-Inter);
   src: 
     local('Inter-Variable'),
     url(../fonts/Inter-Variable.woff2) format('woff2 supports variations'),
