@@ -68,7 +68,6 @@
   background-color: var(--background-color__section);
   display: flex;
   flex-direction: column;
-  padding-inline: 2px;
 }
 
 .section-title {
@@ -186,8 +185,7 @@
   fill-opacity: 0;
 }
 
-.contour
- {
+.contour {
   fill: var(--contour-color);
   transition: fill 0.1s linear;
 }
@@ -241,7 +239,7 @@
   transform-origin: center;
 }
 
-.like-icon.is-liked .heart {
+.like-icon.is-liked {
   animation: scaleHeart 0.3s ease-in 0.1s;
 }
 

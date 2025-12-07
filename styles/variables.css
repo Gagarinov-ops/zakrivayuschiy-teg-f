@@ -3,6 +3,7 @@
   /* font */
   --font-PressStart2P: 'PressStart2P';
   --font-Inter-Variable: 'Inter-Variable';
+  --font-weight-Inter: 400 410 715 785;
   --font-weight-Inter-title: 715;
   --font-weight-Inter-text: 410;
   --font-size__section: 1.125em;
