@@ -9,8 +9,6 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 */
 
-
-
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -18,9 +16,7 @@
   font-family: var(--font-Inter-Variable, sans-serif), sans-serif;
   font-size: var(--font-size__section);
   font-weight: var(--font-weight-Inter-text);
-  background-image:
-    var(--horizontal-stripes),
-    var(--vertical-stripes),
+  background-image: var(--horizontal-stripes), var(--vertical-stripes),
     var(--color-gradient);
   display: flex;
   flex-direction: column;
@@ -56,6 +52,7 @@
 
 .main {
   inline-size: var(--section-width);
+  background-color: var(--background-color__section);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -65,7 +62,6 @@
 
 .section {
   border: var(--section-border);
-  background-color: var(--background-color__section);
   display: flex;
   flex-direction: column;
 }
@@ -115,8 +111,8 @@
 }
 
 .image-neon {
-  filter: brightness(1.5) contrast(1.8) saturate(2) 
-          hue-rotate(180deg) drop-shadow(0 0 10px cyan);
+  filter: brightness(1.5) contrast(1.8) saturate(2) hue-rotate(180deg)
+    drop-shadow(0 0 10px cyan);
 }
 
 .lable {
@@ -130,17 +126,16 @@
   -webkit-text-stroke: 1px #fff;
   text-stroke: 1px #fff;
   text-shadow: none;
-  /* box-shadow: 0 4px 4px rgb(0 0 0 / 0.25); */
 }
 
-@supports not ((-webkit-text-stroke: 1px #fff) or (text-stroke: 1px #fff)) {
-  .text-outline-filter {
-    color: #000;
+@supports ((-webkit-text-stroke: 1px #fff) or (text-stroke: 1px #fff)) {
+  .label {
+    color: rgb(0 0 0 / 0.5);
     text-shadow: 
-      1px 0 0 #fff,
-      0 1px 0 #fff,
-      -1px 0 0 #fff,
-      0 -1px 0 #fff;
+      1px 1px 0 #fff,
+      -1px 1px 0 #fff,
+      1px -1px 0 #fff,
+      -1px -1px 0 #fff;
   }
 }
 
@@ -272,6 +267,7 @@
 .button__text {
   font-family: var(--font-PressStart2P);
   font-size: var(--font-size__button-text);
+  text-transform: uppercase;
   position: relative;
   z-index: 2;
   mix-blend-mode: difference;
@@ -294,7 +290,7 @@
 }
 
 .button-save::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -321,7 +317,6 @@
 
 .button__text-save {
   white-space: nowrap;
-  
 }
 
 dialog {
@@ -374,7 +369,7 @@ dialog {
 
 .card__like-button::before,
 .close::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
