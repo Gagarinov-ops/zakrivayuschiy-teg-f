@@ -130,17 +130,16 @@
   -webkit-text-stroke: 1px #fff;
   text-stroke: 1px #fff;
   text-shadow: none;
-  /* box-shadow: 0 4px 4px rgb(0 0 0 / 0.25); */
 }
 
-@supports not ((-webkit-text-stroke: 1px #fff) or (text-stroke: 1px #fff)) {
-  .text-outline-filter {
-    color: #000;
+@supports ((-webkit-text-stroke: 1px #fff) or (text-stroke: 1px #fff)) {
+  .label {
+    color: rgb(0 0 0 / 0.5);
     text-shadow: 
-      1px 0 0 #fff,
-      0 1px 0 #fff,
-      -1px 0 0 #fff,
-      0 -1px 0 #fff;
+      1px 1px 0 #fff,
+      -1px 1px 0 #fff,
+      1px -1px 0 #fff,
+      -1px -1px 0 #fff;
   }
 }
 
@@ -272,6 +271,7 @@
 .button__text {
   font-family: var(--font-PressStart2P);
   font-size: var(--font-size__button-text);
+  text-transform: uppercase;
   position: relative;
   z-index: 2;
   mix-blend-mode: difference;
@@ -280,14 +280,11 @@
 
 .button-save {
   border: var(--section-border);
-  inline-size: var(--button-save__inline-size);
-  block-size: var(--button-save__block-size);
   max-block-size: 55px;
   display: flex;
   padding: 20px;
   align-items: center;
   gap: 4px;
-  transition: box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -372,8 +369,7 @@ dialog {
   cursor: pointer;
 }
 
-.card__like-button::before,
-.close::before {
+.hover-fill::before {
   content: '';
   position: absolute;
   top: 0;
@@ -386,17 +382,8 @@ dialog {
   z-index: 1;
 }
 
-.card__like-button:hover::before,
-.close:hover::before {
-  transform: translateX(0);
-}
-
-.card__like-button span,
-.close span {
-  cursor: pointer;
-  position: relative;
-  z-index: 2;
-  mix-blend-mode: difference;
+.hover-fill:hover::before {
+  transform: scaleX(1); 
 }
 
 dialog:not([open]) {
@@ -415,6 +402,11 @@ dialog::backdrop {
   outline: none;
   box-shadow: 2px 2px 0 #000;
 }
+
+.trans-focus {
+  transition: box-shadow 0.3s ease;
+}
+
 
 @media (width <= 376px) {
   .section-title {
