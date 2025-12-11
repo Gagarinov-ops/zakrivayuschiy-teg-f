@@ -52,7 +52,6 @@
 
 .main {
   inline-size: var(--section-width);
-  background-color: var(--background-color__section);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -61,7 +60,8 @@
 }
 
 .section {
-  border: var(--section-border);
+  border: var(--section-border);  
+  background-color: var(--background-color__section);
   display: flex;
   flex-direction: column;
 }
@@ -70,7 +70,7 @@
   font-size: var(--font-size__section-title);
   font-weight: var(--font-weight__section-title);
   max-block-size: 30px;
-  border: var(--section-border);
+  border-bottom: var(--section-border);
   width: 100%;
   padding: 4px 10px;
   line-height: 1.156;
