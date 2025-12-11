@@ -276,14 +276,11 @@
 
 .button-save {
   border: var(--section-border);
-  inline-size: var(--button-save__inline-size);
-  block-size: var(--button-save__block-size);
   max-block-size: 55px;
   display: flex;
   padding: 20px;
   align-items: center;
   gap: 4px;
-  transition: box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -367,9 +364,14 @@ dialog {
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 .card__like-button::before,
 .close::before {
   content: "";
+=======
+.hover-fill::before {
+  content: '';
+>>>>>>> restored-branch
   position: absolute;
   top: 0;
   left: 0;
@@ -381,17 +383,8 @@ dialog {
   z-index: 1;
 }
 
-.card__like-button:hover::before,
-.close:hover::before {
-  transform: translateX(0);
-}
-
-.card__like-button span,
-.close span {
-  cursor: pointer;
-  position: relative;
-  z-index: 2;
-  mix-blend-mode: difference;
+.hover-fill:hover::before {
+  transform: scaleX(1); 
 }
 
 dialog:not([open]) {
@@ -410,6 +403,11 @@ dialog::backdrop {
   outline: none;
   box-shadow: 2px 2px 0 #000;
 }
+
+.trans-focus {
+  transition: box-shadow 0.3s ease;
+}
+
 
 @media (width <= 376px) {
   .section-title {
