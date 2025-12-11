@@ -95,7 +95,7 @@
 }
 
 .image-contrast-inversion {
-  filter: contrast(1.1) invert(0.3);
+  filter: contrast(1.1) invert(0.9);
 }
 
 .image-sepia-contrast {
@@ -357,14 +357,13 @@ dialog {
   background-color: transparent;
   border: var(--section-border);
   padding-block: 12.5px;
-  transition: box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
   color: var(--text-color);
   cursor: pointer;
 }
 
-/* .hover-fill::before {
+.hover-fill::before {
   content: '';
   position: absolute;
   top: 0;
@@ -379,7 +378,7 @@ dialog {
 
 .hover-fill:hover::before {
   transform: scaleX(1); 
-} */
+}
 
 dialog:not([open]) {
   pointer-events: none;
