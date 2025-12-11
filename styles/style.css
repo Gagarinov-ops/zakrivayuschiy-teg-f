@@ -364,11 +364,6 @@ dialog {
   cursor: pointer;
 }
 
-<<<<<<< HEAD
-.card__like-button::before,
-.close::before {
-  content: "";
-=======
 .hover-fill::before {
   content: '';
 >>>>>>> restored-branch
@@ -407,7 +402,6 @@ dialog::backdrop {
 .trans-focus {
   transition: box-shadow 0.3s ease;
 }
-
 
 @media (width <= 376px) {
   .section-title {
