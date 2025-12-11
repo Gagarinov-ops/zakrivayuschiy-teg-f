@@ -372,8 +372,7 @@ dialog {
   cursor: pointer;
 }
 
-.card__like-button::before,
-.close::before {
+.hover-fill::before {
   content: '';
   position: absolute;
   top: 0;
@@ -386,17 +385,8 @@ dialog {
   z-index: 1;
 }
 
-.card__like-button:hover::before,
-.close:hover::before {
-  transform: translateX(0);
-}
-
-.card__like-button span,
-.close span {
-  cursor: pointer;
-  position: relative;
-  z-index: 2;
-  mix-blend-mode: difference;
+.hover-fill:hover::before {
+  transform: scaleX(1); 
 }
 
 dialog:not([open]) {
@@ -414,6 +404,10 @@ dialog::backdrop {
 .close:focus {
   outline: none;
   box-shadow: 2px 2px 0 #000;
+}
+
+.trans-focus {
+  transition: box-shadow 0.3s ease;
 }
 
 @media (width <= 376px) {
