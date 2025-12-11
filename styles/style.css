@@ -364,9 +364,8 @@ dialog {
   cursor: pointer;
 }
 
-.hover-fill::before {
+/* .hover-fill::before {
   content: '';
->>>>>>> restored-branch
   position: absolute;
   top: 0;
   left: 0;
@@ -380,7 +379,7 @@ dialog {
 
 .hover-fill:hover::before {
   transform: scaleX(1); 
-}
+} */
 
 dialog:not([open]) {
   pointer-events: none;
