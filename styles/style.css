@@ -100,7 +100,7 @@
 }
 
 .image-contrast-inversion {
-  filter: contrast(1.1) invert(0.5);
+  filter: contrast(1.1) invert(0.9);
 }
 
 .image-sepia-contrast {
@@ -295,24 +295,6 @@
   cursor: pointer;
 }
 
-.button-save::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--hover-color);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform var(--transition-duration) ease-in-out;
-  z-index: 1;
-}
-
-.button-save:hover::before {
-  transform: scaleX(1);
-}
-
 .floppy {
   width: var(--floppy-width);
   position: relative;
@@ -367,15 +349,13 @@ dialog {
   background-color: transparent;
   border: var(--section-border);
   padding-block: 12.5px;
-  transition: box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
   color: var(--text-color);
   cursor: pointer;
 }
 
-.card__like-button::before,
-.close::before {
+.hover-fill::before {
   content: '';
   position: absolute;
   top: 0;
@@ -388,17 +368,8 @@ dialog {
   z-index: 1;
 }
 
-.card__like-button:hover::before,
-.close:hover::before {
-  transform: translateX(0);
-}
-
-.card__like-button span,
-.close span {
-  cursor: pointer;
-  position: relative;
-  z-index: 2;
-  mix-blend-mode: difference;
+.hover-fill:hover::before {
+  transform: scaleX(1); 
 }
 
 dialog:not([open]) {
@@ -416,6 +387,10 @@ dialog::backdrop {
 .close:focus {
   outline: none;
   box-shadow: 2px 2px 0 #000;
+}
+
+.trans-focus {
+  transition: box-shadow 0.3s ease;
 }
 
 @media (width <= 376px) {
