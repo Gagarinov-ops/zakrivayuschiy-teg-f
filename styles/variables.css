@@ -1,14 +1,13 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
   /* font */
-  --font-PressStart2P: 'PressStart2P';
-  --font-Inter-Variable: 'Inter-Variable';
-  --font-weight-Inter: 400 785;
-  --font-weight-Inter-title: 785;
-  --font-weight-Inter-text: 410;
+  --title-font: 'PressStart2P';
+  --main-font: 'Inter-Variable';
+  --font-weight-title: 715;
+  --font-weight-text: 410;
   --font-size__section: 1.125em;
   --font-size__header-title: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
-  --font-size__header-span: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  --font-size__header-subtitle: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   --font-size__button-text: 14px;
   --line-height__page: 21px;
 
@@ -50,6 +49,7 @@
   /* button */
   --button-save__inline-size: 335px;
   --button-save__block-size: clamp(55px, 84px - 1.2676vw, 84px);
+  --border-button: 1px solid #000;
 
   /* floppy__button-save */
   --floppy-width: clamp(21px, 35.5px - 1.03vw, 28px);
