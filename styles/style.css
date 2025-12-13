@@ -15,7 +15,7 @@
   padding-block: var(--page-padding);
   font-family: var(--main-font, sans-serif), sans-serif;
   font-size: var(--font-size__section);
-  font-weight: var(--font-weight-Inter-text);
+  font-weight: var(--font-weight-text);
   background-image: var(--horizontal-stripes), var(--vertical-stripes),
     var(--color-gradient);
   background-attachment: fixed;
@@ -74,7 +74,7 @@
 
 .section-title {
   font-size: var(--font-size__section-title);
-  font-variation-settings: var(--font-weight__section-title);
+  font-variation-settings: var(--font-weight-title);
   padding: var(--padding__section-title);
   line-height: normal;
 }
@@ -138,7 +138,7 @@
 }
 
 @supports (-webkit-text-stroke: 1px #fff) or (text-stroke: 1px #fff) {
- lable {
+ .lable {
     text-shadow: none;
     -webkit-text-stroke: 1px #fff;
     text-stroke: 1px #fff;
@@ -171,7 +171,6 @@
   box-shadow: 0 0 0 1px #000;
   background-color: inherit;
   transition: box-shadow 0.3s ease;
-  font-family: var(--title-font, sans-serif), sans-serif;
 }
 
 .button:focus {
@@ -210,7 +209,7 @@
 }
 
 .like-icon:hover .core {
-  transition-delay: 0;
+  transition-delay: initial;
   fill: var(--hover-color);
 }
 
@@ -220,7 +219,7 @@
 }
 
 .like-icon:active .core {
-  transition-delay: 0;
+  transition-delay: initial;
   fill: var(--main-body-color);
 }
 
@@ -235,7 +234,7 @@
 }
 
 .like-icon.is-liked .core {
-  transition-delay: 0;
+  transition-delay: initial;
   fill: var(--main-body-color);
 }
 
@@ -269,6 +268,10 @@
 }
 
 .card__like-button {
+  max-inline-size: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 6.5px 35px;
   position: relative;
   overflow: hidden;
@@ -276,7 +279,7 @@
 }
 
 .button__text {
-  font-family: var(--title-font);
+  font-family: var(--title-font, sans-serif), sans-serif;
   font-size: var(--font-size__button-text);
   position: relative;
   z-index: 2;
@@ -285,7 +288,7 @@
 }
 
 .button-save {
-  min-block-size: 55px;
+  max-block-size: 55px;
   display: flex;
   padding: 20px;
   align-items: center;
@@ -319,10 +322,6 @@
   z-index: 2;
   mix-blend-mode: difference;
   color: var(--text-color);
-}
-
-.button__text-save {
-  white-space: nowrap;
 }
 
 dialog {
@@ -402,16 +401,21 @@ dialog::backdrop {
   box-shadow: 2px 2px 0 #000;
 }
 
+.card__like-button:focus-visible,
+.button-save:focus-visible,
+.close:focus-visible {
+  box-shadow: 2px 2px 0 #000;
+}
+
 @media (width <= 376px) {
   .button-save {
     flex-direction: column;
-    padding-block: 17px;
+    padding-block: 17px; 
+    max-block-size: 84px;
   }
 
   dialog {
     max-inline-size: 341px;
     padding: 30px 40px;
-    display: flex;
-    flex-direction: column;
   }
 }
