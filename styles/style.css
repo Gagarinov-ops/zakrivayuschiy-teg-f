@@ -260,7 +260,7 @@
 }
 
 .card__icon-button:active .heart {
-  animation: sparkleFill 0.3s ease-in 0.3s 1 normal;
+  animation: 0.3s ease-in 0.3s 1 normal;
 }
 
 .card__icon-button:focus-visible {
