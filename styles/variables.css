@@ -1,71 +1,71 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-  /* font */
-  --title-font: 'PressStart2P';
-  --main-font: 'Inter-Variable';
+  /* Шрифты */
+  --font-family-title: 'PressStart2P';
+  --font-family-main: 'Inter-Variable';
+
+  /* Веса шрифтов */
   --font-weight-title: 715;
   --font-weight-text: 410;
-  --font-size__section: 18px;
-  --font-size__header-title: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
-  --font-size__header-subtitle: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
-  --font-size__button-text: 14px;
-  --line-height__page: 21px;
+  --font-weight-section-title: 715;
 
-  /* page */
-  --page-padding: 100px;
+  /* Размеры шрифтов */
+  --font-size-base: 1.125rem;
+  --font-size-button: 0.875rem;
+  --font-size-section-title: inherit;
 
-  /* background-gradient */
-  --horizontal-stripes: repeating-linear-gradient(
+  /* Адаптивные размеры */
+  --font-size-header-title: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  --font-size-header-subtitle: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+
+  /* Интерлиньяж */
+  --line-height-base: 1.3125;
+
+  /* Градиенты */
+  --gradient-horizontal-stripes: repeating-linear-gradient(
     to right,
     #d3d3d3,
     #d3d3d3 2px,
     transparent 2px,
     transparent 4px);
-  --vertical-stripes: repeating-linear-gradient(
+  --gradient-vertical-stripes: repeating-linear-gradient(
     to bottom,
     #d3d3d3,
     #d3d3d3 2px,
     transparent 2px,
     transparent 4px);
-  --color-gradient: linear-gradient(
+  --gradient-main: linear-gradient(
     to bottom,
     #e7e7e7 0.01%,
     #1a1a1a 100%);
 
-  /* section */
-  --section-width: clamp(23.437rem, 30.5172vw + 16.2845rem, 43.75rem);
-  --section-border: 2px solid #000;
-  --background-color__section: #fff;
+  /* Секции */
+  --section-width: clamp(23.4375rem, 30.5172vw + 16.2845rem, 43.75rem);
+  --section-border: 0.125rem solid #000;
+  --section-background: #fff;
+  --section-title-padding: 0.25rem 0.625rem;
 
-  /* header */
-  --header-padding__block: clamp(122px, 115px + 1.875vw, 130px);
-  --header-padding__inline: clamp(16px, -106.5px + 25.625vw, 122.5px);
+  /* Хедер */
+  --header-padding-block: clamp(7.625rem, 7.1875rem + 1.875vw, 8.125rem);
+  --header-padding-inline: clamp(1rem, -6.6563rem + 25.625vw, 7.6563rem);
 
-  /* section-title */
-  --padding__section-title: 4px 10px;
-  --font-size__section-title: inherit;
-  --font-weight__section-title: 715;
+  /* Кнопки */
+  --button-border: 0.0625rem solid #000;
+  --button-save-width: 20.9375rem;
+  --button-save-height: clamp(3.4375rem, 5.25rem - 1.2676vw, 5.25rem);
 
-  /* button */
-  --button-save__inline-size: 335px;
-  --button-save__block-size: clamp(55px, 84px - 1.2676vw, 84px);
-  --border-button: 1px solid #000;
+  /* Иконка дискеты */
+  --icon-floppy-width: clamp(1.3125rem, 2.2188rem - 1.03vw, 1.75rem);
 
-  /* floppy__button-save */
-  --floppy-width: clamp(21px, 35.5px - 1.03vw, 28px);
+  /* Диалоговые окна */
+  --dialog-width: clamp(21.3125rem, 21.0625rem + 1.127vw, 22.0625rem);
+  --button-close-width: clamp(16.3125rem, 15.6084rem + 3.0047vw, 18.3125rem);
 
-  /* dialog-size */
-  --dialog-width: clamp(341px, 337px + 1.127vw, 353px);
-  --close__inline-size: clamp(261px, 249.735px + 3.0047vw, 293px);
-  --dialog-height: 191px;
-  --close__block-size: 38px;
+  /* Цвета */
+  --color-text: #ffffff;
+  --color-hover: #000000;
+  --color-contour: #000000;
+  --color-main-body: #ff0000;
 
-  --text-color: #ffffff;
-  --hover-color: #000000;
+  /* Анимации */
   --transition-duration: 0.5s;
-
-  --contour-color: black;
-  --main-body-color: #ff0000;
-  --animation-fill-color: #FF0000;
 }
-
